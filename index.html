@@ -101,27 +101,28 @@
 <li>使用環境 hexo及びhexo-deployer</li>
 </ul>
 <hr>
-<h2 id="ムームードメインの設定"><a href="#ムームードメインの設定" class="headerlink" title="ムームードメインの設定"></a>ムームードメインの設定</h2><p>Cloudflareから2つDNSサーバーのドメインが紹介されるので,コントロールパネルにログインした後にネームサーバー設定変更,取得したドメインで使用するに貼り付けます.</p>
-<h2 id="Cloudflareの設定"><a href="#Cloudflareの設定" class="headerlink" title="Cloudflareの設定"></a>Cloudflareの設定</h2><p>開発者登録を行い取得した独自ドメインを入力するとDNSサーバーのドメインが2つ提示されるので,ドメインを購入したサイト(ムームードメイン)でこれを設定する.これの後にhttps化するかなどの設定欄があるのでこれの設定をし,DNSのレコードを作るところまで行く.</p>
-<p>ちなみに独自ドメインがWhois(ドメイン管理の団体)に登録されるまで若干のラグがあるので,ドメインが承認されていませんのエラーが出ても待ちましょう.僕はムームードメインからの認証メールのリンクを踏んでから1,2時間後ぐらいに設定できました.Webサーバー回りの設定って大体ちょっと若干ラグがあるので不安になりますよね(´･･｀)</p>
-<p>ムームードメイン側でCloudflareのDNSを使う設定を行った次はレコードの設定ですが,こいつが曲者だった.何やらレコードを作れとのことなので調べてみると,AタイプはIPv4用のレコード,AAAAタイプはIPv6用のレコードらしいです.</p>
-<p>GitHubPagesのIPアドレスを調べたところ,<a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">公式ページ曰く</a>指定の4つのIPアドレスに対して設定を行う様子なので,コンテンツにGitHub指定のIPアドレスを指定してレコードを4つ作ります.残るはユーザー名ですが,これは「@」の一文字のみ入力しました.意味不明ですね.ワザップかな.ちなみに余計な文字を入れた時は動かなかったので謎が残っちゃいましたがいつか分かる時が来ると信じて今は放置します.</p>
+<h2 id="ムームードメインの設定"><a href="#ムームードメインの設定" class="headerlink" title="ムームードメインの設定"></a>ムームードメインの設定</h2><p>Cloudflareから2つDNSサーバーのドメインが紹介されるので,コントロールパネルにログインした後にネームサーバー設定変更,取得したドメインで使用するのDNS欄に貼り付けます.</p>
+<h2 id="Cloudflareの設定"><a href="#Cloudflareの設定" class="headerlink" title="Cloudflareの設定"></a>Cloudflareの設定</h2><p>開発者登録を行い取得した独自ドメインを入力するとDNSサーバーのドメインが2つ提示されるので,ドメインを購入したサイト(ムームードメイン)で貼り付けします.設定後にhttps化するかなどを聞かれるので任意に設定していきます.これが終わると次からDNSのレコードを作っていきます.</p>
+<p>※ちなみに独自ドメインがWhois(ドメイン管理の団体)に登録されるまで若干のラグがあるので,ドメインが承認されていませんのエラーが出ても待ちましょう.僕はムームードメインからの認証メールのリンクを踏んでから1,2時間後ぐらいに設定できました.Webサーバー回りの設定って大体ちょっと若干ラグがあるので不安になりますよね(´･･｀)</p>
+<p>本題に戻りレコードの設定ですが,こいつが曲者だった.何やらレコードを作れとのことなので調べてみると,AタイプはIPv4用のレコード,AAAAタイプはIPv6用のレコードらしいです.</p>
+<p>GitHubPagesのIPアドレスを調べたところ,<a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">公式ページ曰く</a>Github指定の4つのIPアドレスに対して設定を行えば良さそう.レコードタイプをA,コンテンツに上記の4つのアドレスを入力.残るはユーザー名ですが,これは「@」の一文字のみ入力しました.意味不明ですね.溢れ出るワザップ感.ちなみに余計な文字を入れた時は動かなかったので謎が残っちゃいましたがいつか分かる時が来ると信じて今は放置することにします.</p>
 <ul>
 <li>タイプ A</li>
 <li>名前 @</li>
 <li>コンテンツ 185.199.1XX.153<br>コンテンツの3Byte目を変更して計4つ登録.</li>
 </ul>
 <p>ちなみにGithubPagesのサーバーでIPv6のアドレスは見つけられなかったのでAAAAタイプのレコードは設定しないことにしました.</p>
-<p>また,Aタイプのレコードを設定したものの,GithubのPagesの設定上で<a href="http://www.docteu.techのサブドメインをオススメするという警告が出たので,CNAMEタイプのレコードを作る羽目に.ｲﾐｶﾞﾜｶﾗﾅｲﾖｫ!(´･･｀)">www.docteu.techのサブドメインをオススメするという警告が出たので,CNAMEタイプのレコードを作る羽目に.ｲﾐｶﾞﾜｶﾗﾅｲﾖｫ!(´･･｀)</a></p>
+<p>また,Aタイプのレコードを設定したものの,GithubのPagesの設定上でサブドメインの設定をオススメするという警告が出たので,CNAMEタイプのレコードを作る羽目に……(´･･｀)???</p>
 <ul>
 <li>タイプ CNAME</li>
 <li>名前 www</li>
-<li>コンテンツ jellybeans511.github.io<br>コンテンツはGitHubPagesを有効化した際のアドレスです.</li>
+<li>コンテンツ jellybeans511.github.io<br>コンテンツはGitHubPagesを有効化した際のアドレスです.(Githubユーザー名).github.io.</li>
 </ul>
 <h2 id="GitHubPagesの設定"><a href="#GitHubPagesの設定" class="headerlink" title="GitHubPagesの設定"></a>GitHubPagesの設定</h2><p>Pagesの設定欄に行き,Custom domainに自分の購入したドメインを入力するだけです.ここでエラーを吐かれるとDNSレコードの設定が上手くいっていないため名前解決が出来てない状態になります.</p>
 <h2 id="hexoを使う上で困ったこと"><a href="#hexoを使う上で困ったこと" class="headerlink" title="hexoを使う上で困ったこと"></a>hexoを使う上で困ったこと</h2><p>上記で多分GitHubPagesをClouflareのDNSを設定するのは完結するのですが,hexoを使ってデプロイするとPagesの設定がリセットされて,いちいちGithubPagesの設定から独自ドメインを打ちなおさなくてはならない状態に陥ってしまいました.</p>
 <p>対策として,カスタムドメインを入力した際にGithubリポジトリ上に生成されるCNAMEというファイルをダウンロードし,自分のローカルのhexoプロジェクトのpublicディレクトリ直下に置くと,デプロイしても設定が維持されるようになりました.</p>
-<h2 id="懺悔"><a href="#懺悔" class="headerlink" title="懺悔"></a>懺悔</h2><p>初見殺しなシーンが沢山ありましたが,なんとか設定が終わってこれでようやくカリスマブロガーです.<br>しかし,GithubPagesとCloudflareで調べていると,CloudflareがCloudflarePagesなるものを出していて,最初からこっち使えばよかったんじゃないか……</p>
+<h2 id="懺悔"><a href="#懺悔" class="headerlink" title="懺悔"></a>懺悔</h2><p>初見殺しなシーンが沢山ありましたが,なんとか設定が終わってこれでようやくカリスマブロガーといいたいところですが,トラブルシューティングがてらGithubPagesとCloudflareで調べていると,CloudflareがCloudflarePagesなるものを出しているようで,最初からこっち使えばよかったんじゃないかと思うと何ともやり切れない気持に……(´･･｀)</p>
+<p>いつか絶対CloudflarePagesに移行するんだ……</p>
 <p>……🤮</p>
 
       
