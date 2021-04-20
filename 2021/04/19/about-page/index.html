@@ -6,12 +6,12 @@
   
   <title>hexoでブロガーになるの巻 | てう速5センチメートル</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="このブログですが、Node.jsのフレームワークである「hexo」を用いて作成してみました。Webページ作る系のアプリケーションはWordPressしか知りませんでしたが、生憎GithubPagesでは動的なコンテンツを動かすことが出来ないのでWordPressは使えませんでした。 そんなことで小洒落た静的ファイルを生成しつつ楽にWebページを作れる代物を探していたところhexoなるものが。大学院">
+  <meta name="description" content="このブログですが,Node.jsのフレームワークである「hexo」を用いて作成してみました.Webページ作る系のアプリケーションはWordPressしか知りませんでしたが,生憎GithubPagesでは動的なコンテンツを動かすことが出来ないのでWordPressは使えませんでした. そんなことで小洒落た静的ファイルを生成しつつ楽にWebページを作れる代物を探していたところhexoなるものが.大学院">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexoでブロガーになるの巻">
 <meta property="og:url" content="https://jellybeans511.github.io/hexo/2021/04/19/about-page/index.html">
 <meta property="og:site_name" content="てう速5センチメートル">
-<meta property="og:description" content="このブログですが、Node.jsのフレームワークである「hexo」を用いて作成してみました。Webページ作る系のアプリケーションはWordPressしか知りませんでしたが、生憎GithubPagesでは動的なコンテンツを動かすことが出来ないのでWordPressは使えませんでした。 そんなことで小洒落た静的ファイルを生成しつつ楽にWebページを作れる代物を探していたところhexoなるものが。大学院">
+<meta property="og:description" content="このブログですが,Node.jsのフレームワークである「hexo」を用いて作成してみました.Webページ作る系のアプリケーションはWordPressしか知りませんでしたが,生憎GithubPagesでは動的なコンテンツを動かすことが出来ないのでWordPressは使えませんでした. そんなことで小洒落た静的ファイルを生成しつつ楽にWebページを作れる代物を探していたところhexoなるものが.大学院">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://jellybeans511.github.io/source/about-page/github.png">
 <meta property="article:published_time" content="2021-04-19T05:00:00.000Z">
@@ -98,15 +98,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>このブログですが、Node.jsのフレームワークである<a target="_blank" rel="noopener" href="https://hexo.io/">「hexo」</a>を用いて作成してみました。Webページ作る系のアプリケーションはWordPressしか知りませんでしたが、生憎GithubPagesでは動的なコンテンツを動かすことが出来ないのでWordPressは使えませんでした。</p>
-<p>そんなことで小洒落た静的ファイルを生成しつつ楽にWebページを作れる代物を探していたところhexoなるものが。大学院の研究でNode.jsを使っていたのもありとっつきやすかったのですが、マークダウンで記述が簡単、Githubにdeployするのも簡単でGithubPagesでブログを書くために用意された物なんじゃないかと思うほど。備忘録がてらインストールからWebページ公開までの手順を載せてみます。無料で自分好みのページが作れちゃうので皆さんもレッツトライです。Windowsを想定しているのでMacの方はgitのインストール方法がちょっと違う気がするので調べてみてください。</p>
+        <p>このブログですが,Node.jsのフレームワークである<a target="_blank" rel="noopener" href="https://hexo.io/">「hexo」</a>を用いて作成してみました.Webページ作る系のアプリケーションはWordPressしか知りませんでしたが,生憎GithubPagesでは動的なコンテンツを動かすことが出来ないのでWordPressは使えませんでした.</p>
+<p>そんなことで小洒落た静的ファイルを生成しつつ楽にWebページを作れる代物を探していたところhexoなるものが.大学院の研究でNode.jsを使っていたのもありとっつきやすかったのですが,マークダウンで記述が簡単,Githubにdeployするのも簡単でGithubPagesでブログを書くために用意された物なんじゃないかと思うほど.備忘録がてらインストールからWebページ公開までの手順を載せてみます.無料で自分好みのページが作れちゃうので皆さんもレッツトライです.Windowsを想定しているのでMacの方はgitのインストール方法がちょっと違う気がするので調べてみてください.</p>
 <hr>
-<h2 id="1-Node-jsのインストール"><a href="#1-Node-jsのインストール" class="headerlink" title="1.Node.jsのインストール"></a>1.Node.jsのインストール</h2><p>既にインストールしていれば飛ばしてOKです。<br><a target="_blank" rel="noopener" href="https://nodejs.org/ja/">Node.js公式</a>からLTS版をインストールします。案の定.exeファイルがインストールされますので、はいはい押していけばインストールが終わります。もし、ファイアーウォールの警告が出たら、プライベートなネットワークでの接続を許可し、パブリックなネットワークでは接続を許可しないにチェックを入れましょう。何も出てこなければ気にしなくて大丈夫です。</p>
-<h2 id="2-GitHubの登録"><a href="#2-GitHubの登録" class="headerlink" title="2.GitHubの登録"></a>2.GitHubの登録</h2><p>ここも既に登録していれば飛ばしてOKです。<br><a target="_blank" rel="noopener" href="https://github.com/">GitHub公式</a>のSign upから登録を行います。登録が終わったらサインインしてRepositories横のNewボタンを押してリポジトリを作りましょう！<img src="/source/about-page/github.png"></p>
-<h2 id="3-gitの登録"><a href="#3-gitの登録" class="headerlink" title="3.gitの登録"></a>3.gitの登録</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/">git公式</a>のDownloadボタンを押しましょう。例にもれず.exeファイルがダウンロードされえると思いますのでYesマンになりインストールを終わらせます。</p>
-<h2 id="4-hexoをインストール"><a href="#4-hexoをインストール" class="headerlink" title="4.hexoをインストール"></a>4.hexoをインストール</h2><p>これで布陣が揃いました。Windowsキーを押し検索窓からpower shellを検索し起動します。<br><code>npm install hexo-cli -g</code>を入力するとNode.jsのパッケージマネージャーであるnpmがhexoをインストールしてくれます。</p>
-<h2 id="5-初期化、ブログ作成"><a href="#5-初期化、ブログ作成" class="headerlink" title="5.初期化、ブログ作成"></a>5.初期化、ブログ作成</h2><p>power shellで現在の自分のディレクトリが記載されているので、hexoのプロジェクトファイルを置きたいところに移動します。僕は何も考えずにユーザー直下に作っちゃいました。ディレクトリを決めましたら<code>hexo init blog</code>とコマンドを叩きましょう。blogのプロジェクト名は任意に変更できます。<br><code>cd blog</code>でblogディレクトリに入れますので、<code>hexo server</code>と叩きます。ローカルサーバーがlocalhost:4000で開きますので<a target="_blank" rel="noopener" href="https://localhost:4000/">localhost:4000</a>をブラウザで検索し、ブログの雛形が表示しましょう。ctrl+cでロ－カルサーバーを落とせます。</p>
-<p>また、source/_postsに.mdファイルがあるのでこれを消すと先程のHello Worldの投稿が消えます。増やしていく際は.mdファイルを書き足して記事を投稿していくことになります。記事を増やす際は<code>hexo new first-contents</code>とするとfirst-contentsという記事が_postsディレクトリに生成されますので、first-contents.mdをマークダウン形式で記述していきます。</p>
+<h2 id="1-Node-jsのインストール"><a href="#1-Node-jsのインストール" class="headerlink" title="1.Node.jsのインストール"></a>1.Node.jsのインストール</h2><p>既にインストールしていれば飛ばしてOKです.<br><a target="_blank" rel="noopener" href="https://nodejs.org/ja/">Node.js公式</a>からLTS版をインストールします.案の定.exeファイルがインストールされますので,はいはい押していけばインストールが終わります.もし,ファイアーウォールの警告が出たら,プライベートなネットワークでの接続を許可し,パブリックなネットワークでは接続を許可しないにチェックを入れましょう.何も出てこなければ気にしなくて大丈夫です.</p>
+<h2 id="2-GitHubの登録"><a href="#2-GitHubの登録" class="headerlink" title="2.GitHubの登録"></a>2.GitHubの登録</h2><p>ここも既に登録していれば飛ばしてOKです.<br><a target="_blank" rel="noopener" href="https://github.com/">GitHub公式</a>のSign upから登録を行います.登録が終わったらサインインしてRepositories横のNewボタンを押してリポジトリを作りましょう！<img src="/source/about-page/github.png"></p>
+<h2 id="3-gitの登録"><a href="#3-gitの登録" class="headerlink" title="3.gitの登録"></a>3.gitの登録</h2><p><a target="_blank" rel="noopener" href="https://git-scm.com/">git公式</a>のDownloadボタンを押しましょう.例にもれず.exeファイルがダウンロードされえると思いますのでYesマンになりインストールを終わらせます.</p>
+<h2 id="4-hexoをインストール"><a href="#4-hexoをインストール" class="headerlink" title="4.hexoをインストール"></a>4.hexoをインストール</h2><p>これで布陣が揃いました.Windowsキーを押し検索窓からpower shellを検索し起動します.<br><code>npm install hexo-cli -g</code>を入力するとNode.jsのパッケージマネージャーであるnpmがhexoをインストールしてくれます.</p>
+<h2 id="5-初期化-ブログ作成"><a href="#5-初期化-ブログ作成" class="headerlink" title="5.初期化,ブログ作成"></a>5.初期化,ブログ作成</h2><p>power shellで現在の自分のディレクトリが記載されているので,hexoのプロジェクトファイルを置きたいところに移動します.僕は何も考えずにユーザー直下に作っちゃいました.ディレクトリを決めましたら<code>hexo init blog</code>とコマンドを叩きましょう.blogのプロジェクト名は任意に変更できます.<br><code>cd blog</code>でblogディレクトリに入れますので,<code>hexo server</code>と叩きます.ローカルサーバーがlocalhost:4000で開きますので<a target="_blank" rel="noopener" href="https://localhost:4000/">localhost:4000</a>をブラウザで検索し,ブログの雛形を表示しましょう.ちなみにctrl+cでロ－カルサーバーを落とせます.</p>
+<p>また,source/_postsに.mdファイルがあるのでこれを消すと先程のHello Worldの投稿が消えます.増やしていく際は.mdファイルを書き足して記事を投稿していくことになります.記事を増やす際は<code>hexo new first-contents</code>とするとfirst-contentsという記事が_postsディレクトリに生成されますので,first-contents.mdをマークダウン形式で記述していきます.</p>
 <p>力尽きたのでインターネットにアップロードするのは近々加筆します(´･･｀)</p>
 
       
