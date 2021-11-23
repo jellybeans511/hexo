@@ -71,6 +71,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-obs-priority" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/11/23/obs-priority/" class="article-date">
+  <time class="dt-published" datetime="2021-11-23T11:42:44.000Z" itemprop="datePublished">2021-11-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/11/23/obs-priority/">OBSのエンコードが過負荷です！問題</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>APEXが下手すぎてとかそういう訳ではありませんが,RTX3090がすっかり無用の長物になってしまいそうなのでこれはいかんということで,スマブラのリプレイ消化のためにすべて垂れ流して録画することにしました.<br>しかしここで困ったのがずっとエンコードをしているとOBS君が「エンコードが過負荷です！」と怒ってきます.<br>GPUのスペックが足りず,指定した設定を満足させられない時に起こりうる現象らしいですが,流石に天下のRTX3090でそれはないでしょう。。。</p>
+<p>ということで調べてみたところ,案の定ソフトウェアの設定で解決できるようでした.<br>タスクマネージャ-&gt;詳細タブ-&gt;OBS64.exe上で右クリック-&gt;優先度の設定-&gt;高<br>に設定してあげるとパタリと止んでフレーム落ちもなくなりました.<br>使ってるGPUはつよつよなのに警告出るという方はお試しください.先述の通り,使っているGPUが非力だとこの設定をしてもあまり大きな効果は得られないと思いますのでご注意を。。。</p>
+<p>いざリプレイ見ると何がそんなに良くて残したのか分からないものが沢山あるって多分あるあるなんでしょうね。。。😞</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://docteu.tech/2021/11/23/obs-priority/" data-id="ckwc1tbqp0000q8vbb64w7qp0" data-title="OBSのエンコードが過負荷です！問題" class="article-share-link">共有</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E8%A1%93%E7%9A%84%E3%81%AA%E3%81%93%E3%81%A8/" rel="tag">技術的なこと</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-omen" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/11/12/omen/" class="article-date">
@@ -423,6 +466,10 @@
       <ul>
         
           <li>
+            <a href="/2021/11/23/obs-priority/">OBSのエンコードが過負荷です！問題</a>
+          </li>
+        
+          <li>
             <a href="/2021/11/12/omen/">OMEN30Lで発生する暗転や再起動してしまう問題</a>
           </li>
         
@@ -436,10 +483,6 @@
         
           <li>
             <a href="/2021/04/19/about-page/">hexoでブロガーになるの巻</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/19/introduction/">自己紹介</a>
           </li>
         
       </ul>
